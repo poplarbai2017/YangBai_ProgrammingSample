@@ -1,0 +1,98 @@
+.button {
+  background: $green-primary;
+  color: white;
+  display: inline-block;
+  border: 1px solid white;
+  text-align: center;
+  padding: 0.2em 1em 0.3em;
+  border-radius: 7px;
+  text-decoration: none;
+
+  &.fb { background: $blue; }
+
+  &.small {
+    padding: 0.2em 0.5em 0.3em;
+  }
+
+}
+
+.button.secondary {
+  background: $gray;
+}
+
+.button-wide {
+  padding: 0.2em 1.5em 0.3em;
+}
+
+.button-wider {
+  padding: 0.2em 3.5em 0.3em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.has-img {
+  img { 
+    height: 40px;
+    width: auto;
+    margin-right: 0.3em;
+  }
+
+  &.small {
+
+    img { height: 28px; }
+
+    span {
+      line-height: 28px;
+    }
+  }
+
+  img,
+  span {
+    float: left;
+  }
+
+  span {
+    line-height: 40px;
+  }
+
+}
+
+.stronger { font-weight: 400; }
+
+.modal {
+  @extend %center-stage;
+  display: none;
+  position: absolute;
+  background: white;
+  text-align: center;
+  color: $gray;
+  padding: 1em;
+  width: 80%;
+  border-radius: 7px;
+  z-index: 15;
+
+  &.badge {
+    padding-top: 2.5em;
+  }
+  
+  img.badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  p {
+    font-size: 70%;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .button { margin: 0 10px; }
+
+  *:last-child { margin: 0; }
+
+}
+

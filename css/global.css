@@ -1,0 +1,772 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End CSS Reset */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 180%;
+}
+
+h3 {
+  color: black;
+  font-size: 120%;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+.button {
+  background: #8FCC92;
+  color: white;
+  display: inline-block;
+  border: 1px solid white;
+  text-align: center;
+  padding: 0.2em 1em 0.3em;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.button.fb {
+  background: #0069ae;
+}
+.button.small {
+  padding: 0.2em 0.5em 0.3em;
+}
+
+.button.secondary {
+  background: #5d5d5d;
+}
+
+.button-wide {
+  padding: 0.2em 1.5em 0.3em;
+}
+
+.button-wider {
+  padding: 0.2em 3.5em 0.3em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.has-img img {
+  height: 40px;
+  width: auto;
+  margin-right: 0.3em;
+}
+.has-img.small img {
+  height: 28px;
+}
+.has-img.small span {
+  line-height: 28px;
+}
+.has-img img,
+.has-img span {
+  float: left;
+}
+.has-img span {
+  line-height: 40px;
+}
+
+.stronger {
+  font-weight: 400;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  background: white;
+  text-align: center;
+  color: #5d5d5d;
+  padding: 1em;
+  width: 80%;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  z-index: 15;
+}
+.modal.badge {
+  padding-top: 2.5em;
+}
+.modal img.badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.modal p {
+  font-size: 70%;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+.modal .button {
+  margin: 0 10px;
+}
+.modal *:last-child {
+  margin: 0;
+}
+
+.app-dialog {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #ff9d33;
+  color: white;
+  line-height: 1em;
+  display: none;
+}
+.app-dialog.active {
+  display: block;
+}
+.app-dialog p {
+  margin-bottom: 0.5em;
+}
+
+.app-dialog-inner {
+  position: relative;
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 1px solid white;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  min-height: 120px;
+  overflow: hidden;
+}
+
+.app-dialog-text-wrap {
+  font-size: 16px;
+  padding: 0 0 0 3.5em;
+}
+
+.spirit {
+  width: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-next {
+  float: right;
+}
+
+.modal,
+.center-stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.start-screen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ff9d33;
+  color: white;
+  z-index: 11;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.2s;
+  -o-transition: -o-transform 0.2s;
+  transition: transform 0.2s;
+}
+.start-screen.off {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.start-screen .center-stage {
+  width: 80%;
+}
+
+.app-intro {
+  margin-bottom: 3em;
+  font-weight: 300;
+}
+
+.app-main {
+  display: none;
+}
+.app-main.on {
+  display: block;
+}
+
+/*header*/
+.app-head {
+  background-color: #8FCC92;
+  height: 50px;
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+}
+
+#profile {
+  float: left;
+  padding-left: 20px;
+  padding-top: 5px;
+  width: auto;
+}
+
+#name {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  top: 15px;
+  left: 65px;
+  position: absolute;
+}
+
+#setting {
+  background-repeat: no-repeat;
+  display: block;
+  float: right;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+/*drawer*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#drawer {
+  position: absolute;
+  top: -32px;
+  /*This number changes with the content*/
+  left: 0px;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 9;
+}
+
+#drawer-content {
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  width: 600px;
+  height: 90px;
+  background-color: white;
+}
+
+#drawer-handle {
+  position: absolute;
+  left: 140px;
+  width: 40px;
+  height: 15px;
+  bottom: -14px;
+  z-index: 9;
+  background-color: #8FCC92;
+}
+
+#drawer.drawer-open {
+  top: 50px;
+}
+
+/*hamburger*/
+.drawer-content {
+  height: 80px;
+  width: 320px;
+  text-align: center;
+  border: 0px solid black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 8px;
+  color: #999999;
+}
+
+#level_one {
+  color: #8FCC92;
+}
+
+#tree_point_one {
+  color: #8FCC92;
+}
+
+.level {
+  font-weight: 700;
+}
+
+.tree_point {
+  font-weight: 400;
+}
+
+/*map*/
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map-canvas {
+  height: 452px;
+}
+
+div.gm-style-iw {
+  overflow: hidden !important;
+}
+
+/*popup window*/
+#window {
+  width: 170px;
+}
+
+#window_n_1, #window_n_2, #window_n_3, #window_n_4, #window_n_5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#window_n_1 {
+  color: #00bba4;
+}
+
+#window_n_2 {
+  color: #751051;
+}
+
+#window_n_3 {
+  color: #46c672;
+}
+
+#window_n_4 {
+  color: #f71f36;
+}
+
+#window_n_5 {
+  color: #839a0a;
+}
+
+#white {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: #5d5d5d;
+  font-size: 10px;
+}
+
+#green {
+  height: 26px;
+  padding-top: 4px;
+  text-align: center;
+  background-color: #8FCC92;
+  width: 170px;
+}
+
+/*grid*/
+/* A basic container with a top margin */
+#drawer-content {
+  margin: 0 0 0 0;
+  /* Top Right Bottom Left */
+}
+
+.drawer-content:after, .badge:after, tree_point:after, .legend:after, #frame:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The [] is a fancy of writing CSS */
+[class*='col-'] {
+  float: left;
+  padding-right: 0px;
+}
+
+.grid [class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+/* last-of-type is a pseudo class, hence the : */
+.col-1-3 {
+  width: 33.33%;
+}
+
+.col-1-5 {
+  width: 20%;
+}
+
+/* If you want it */
+.module01 {
+  background-color: white;
+  padding: 25px;
+}
+
+.module02 {
+  background-color: white;
+  padding: 3px;
+}
+
+.module03 {
+  background-color: white;
+  padding: 5px;
+}
+
+.module1 {
+  background-color: white;
+  padding: 15px;
+}
+
+.module2 {
+  padding: 0px;
+  height: 17px;
+  width: 100%;
+}
+
+.module3 {
+  padding: 6px;
+}
+
+/* Opt-in outside padding */
+.grid-pad [class*='col-']:last-of-type {
+  padding-right: 0px;
+}
+
+/* I had to style the h1, and yes, I know I have margins (for display purposes only) */
+.badge1 {
+  background-image: url("../assets/badge_1_0.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 43px 47px;
+}
+.badge1.complete {
+  background-image: url("../assets/badge_1.png");
+}
+
+.badge2 {
+  background-image: url("../assets/badge_2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 43px 47px;
+}
+
+.badge3 {
+  background-image: url("../assets/badge_3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 43px 47px;
+}
+
+.tree1 {
+  background-image: url("../assets/tree1.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 11px 16px;
+}
+
+.tree2 {
+  background-image: url("../assets/tree2.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 12px 12px;
+}
+
+.tree3 {
+  background-image: url("../assets/tree3.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 17px 20px;
+}
+
+.tree4 {
+  background-image: url("../assets/tree4.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 11px 13px;
+}
+
+.tree5 {
+  background-image: url("../assets/tree5.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 10px 20px;
+}
+
+/*legend*/
+.legend {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  border: 0px solid black;
+  background-color: white;
+}
+
+.points {
+  height: 17px;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: white;
+}
+
+.txt {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#i_one {
+  padding-bottom: -10px;
+}
+
+#i_two {
+  padding-top: 5px;
+}
+
+#i_three {
+  padding-top: 5px;
+}
+
+#i_four {
+  padding-top: 5px;
+}
+
+#i_five {
+  padding-top: 5px;
+}
+
+#p_one {
+  border: 1px solid #8FCC92;
+  background-color: #8FCC92;
+  height: 17px;
+}
+
+#p_two {
+  border: 1px solid #8FCC92;
+  background-color: #8FCC92;
+  height: 17px;
+}
+
+#p_three {
+  border: 1px solid #8FCC92;
+  background-color: #8FCC92;
+  height: 17px;
+}
+
+#p_four {
+  border: 1px solid #8FCC92;
+  background-color: #8FCC92;
+  height: 17px;
+}
+
+#p_five {
+  border: 1px solid #8FCC92;
+  background-color: white;
+  height: 17px;
+}
+
+#t_one {
+  color: #00bba4;
+  padding-top: 5px;
+}
+
+#t_two {
+  color: #751051;
+  padding-top: 5px;
+}
+
+#t_three {
+  color: #46c672;
+  padding-top: 5px;
+}
+
+#t_four {
+  color: #f71f36;
+  padding-top: 5px;
+}
+
+#t_five {
+  color: #839a0a;
+  padding-top: 5px;
+}
+
+/*tree profile*/
+.TreeProfile {
+  background-color: #8FCC92;
+  height: 548px;
+  width: 100%;
+  float: left;
+}
+
+#frame {
+  width: 286px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 44px;
+  margin-left: 17px;
+}
+
+#TreeIcon {
+  position: absolute;
+  top: 7px;
+  left: 23px;
+}
+
+#TreeTitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #839A0A;
+  margin-top: 10px;
+  margin-left: 45px;
+  float: left;
+  min-height: 25px;
+}
+
+#Cross {
+  position: absolute;
+  top: 25px;
+  left: 278px;
+}
+
+#TreePic {
+  margin-top: 11px;
+  padding: 0 10px;
+  /*margin-left:8px;
+  text-align: center;*/
+}
+
+#TreeSpirit {
+  position: absolute;
+  top: 205px;
+  left: 233px;
+}
+
+#TreeContent {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #5d5d5d;
+  float: left;
+  padding: 15px;
+  line-height: 1.3em;
+}
+
+#map, #share {
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.picFullCol {
+  width: 100%;
+  height: auto;
+}
+
+/*result*/
+.result {
+  background-color: white;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.result h1 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.result h2 {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.result p {
+  font-weight: 300;
+  font-size: 24px;
+  margin-top: 15px;
+  line-height: 1.3em;
+}
+
+.video {
+  display: none;
+}

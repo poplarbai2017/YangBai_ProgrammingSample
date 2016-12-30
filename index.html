@@ -1,0 +1,290 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	
+	<title>Treep</title>
+
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCkoGtkFDbxevtPJrWEp2dKuo1H_hFjcI&sensor=true"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+		
+</head>
+	
+<body>
+
+<section class="start-screen centered">
+	<div class="center-stage">
+		<header class="app-intro">
+			<h1>Treep</h1>
+			<p>A Trip to Trees</p>
+		</header>
+		<div>
+			<p>
+				<a href="#" id="app-start" class="button button-wide stronger has-img">
+					<img src="assets/logo-circle.png" alt="plant illustration">
+					<span>Start</span>
+				</a>
+			</p>
+			<p>
+				<a href="#" id="fb-connect" class="button fb has-img small">
+					<img src="assets/fb.png" alt="facebook">
+					<span>Connect</span>
+				</a>
+			</p>
+		</div>
+	</div>
+</section>
+
+
+<section class="app-main"><!-- .app-main -->
+	<header class="app-head">
+		<img id="profile" src="assets/profile.png" width="40" height="40" alt="Profile_Picture">
+		<span id="name">Poplar</span>
+		<a href="#" id="setting"><img src="assets/setting.png" width="20" height="20" alt="Setting"></a>
+	</header>
+		
+	<div id="drawer">
+		<div class="drawer-content">
+			<div class="badge">
+				<div class="col-1-3">
+						<div class="module01 badge1"></div>
+				</div>
+				<div class="col-1-3">
+						<div class="module01 badge2"></div>
+				</div>
+				<div class="col-1-3">
+						<div class="module01 badge3"></div>
+				</div>
+			</div>
+
+			<div class="level">
+				<div class="col-1-3">
+						<div class="module02">
+							<div>Level One</div>
+						</div>
+				</div>
+				<div class="col-1-3">
+						<div class="module02">
+							<div id="level_two">Level Two</div>
+						</div>
+				</div>
+				<div class="col-1-3">
+						<div class="module02">
+							<div id="level_three">Level Three</div>
+						</div>
+				</div>
+			</div>
+		
+					
+			<div class="tree_point">
+				<div class="col-1-3">
+						<div class="module03">
+							<div>5 trees/100 points</div>
+						</div>
+				</div>
+				<div class="col-1-3">
+						<div class="module03">
+							<div id="tree_point_two">10 trees/200 points</div>
+						</div>
+				</div>
+				<div class="col-1-3">
+						<div class="module03">
+							<div id="tree_point_three">20 trees/400 points</div>
+						</div>
+				</div>
+		 	</div>
+		</div>
+
+
+		<div id="drawer-handle" onclick="toggleDrawer()"><img src="assets/handle.png" alt="Handle" width="40" height="15"></div>
+			
+	</div>
+	
+	<div id="main-content"></div>
+	<div id="map-canvas"></div>
+	 
+			
+	<div class="legend">
+		<div class="col-1-5">
+			<div class="module1 tree1"></div>
+		</div>
+		<div class="col-1-5">
+			<div class="module1 tree2"></div>
+		</div>
+		<div class="col-1-5">
+			<div class="module1 tree3"></div>
+		</div>
+		<div class="col-1-5">
+			<div class="module1 tree4"></div>
+		</div>
+		<div class="col-1-5">
+			<a href="profile.html"><div class="module1 tree5"></div></a>
+		</div>
+	</div>
+	
+
+
+	<div class="points">
+	 <div class="col-1-5">
+		 <div class="module2">
+				<div id="p_one"></div>
+		 </div>
+	 </div>
+	 <div class="col-1-5">
+		 <div class="module2">
+				<div id="p_two"></div>
+		 </div>
+	 </div>
+	<div class="col-1-5">
+		 <div class="module2">
+			 <div id="p_three">80 points</div>
+		 </div>
+	 </div>
+	<div class="col-1-5">
+		 <div class="module2">
+				<div id="p_four"></div>
+		 </div>
+	 </div>
+	<div class="col-1-5">
+		 <div class="module2">
+				<div id="p_five"></div>
+		 </div>
+	 </div>
+	</div>
+
+
+
+	<div class="txt">
+	 <div class="col-1-5">
+		 <div class="module3">
+				<h2 id="t_one">Monterey Cypress</h2>
+		 </div>
+	 </div>
+	 <div class="col-1-5">
+		 <div class="module3">
+				<h2 id="t_two">Poison Oak</h2>
+		 </div>
+	 </div>
+	<div class="col-1-5">
+		 <div class="module3">
+				<h2 id="t_three">Andean Wax Palm</h2>
+		 </div>
+	 </div>
+	<div class="col-1-5">
+		 <div class="module3">
+				<h2 id="t_four">Magnolia</h2>
+		 </div>
+	 </div>
+	<div class="col-1-5">
+		 <div class="module3">
+				<h2 id="t_five">Coast Redwood</h2>
+		 </div>
+	 </div>
+	</div>
+
+    
+
+	<div class="modal unlock-tree-1">
+		<h3>AR Camera</h3>
+		<p>
+			Tap the Augmented Reality Camera to unlock the tree!
+		</p>
+		<p>
+			<a href="#" class="button button-wider has-img" id="play-video-1">
+				<img src="assets/camera_w.png" alt="photo camera icon">
+			</a>
+		</p>
+	</div>
+
+	<video id="video-tree-1" class="video">
+		<source src="assets/video/tree-1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		Your browser does not support the video tag.
+	</video>   
+	
+
+
+
+	<div class="modal unlock-tree-2">
+		<h3>AR Camera</h3>
+		<p>
+			Tap the Augmented Reality Camera to unlock the tree!
+		</p>
+		<p>
+			<a href="#" class="button button-wider has-img" id="play-video-2">
+				<img src="assets/camera_w.png" alt="photo camera icon">
+			</a>
+		</p>
+	</div>
+
+	<video id="video-tree-2" class="video">
+		<source src="assets/video/tree-2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		Your browser does not support the video tag.
+	</video>   
+
+
+	<div class="modal unlock-tree-3">
+		<h3>AR Camera</h3>
+		<p>
+			Tap the Augmented Reality Camera to unlock the tree!
+		</p>
+		<p>
+			<a href="#" class="button button-wider has-img" id="play-video-3">
+				<img src="assets/camera_w.png" alt="photo camera icon">
+			</a>
+		</p>
+	</div>
+
+	<video id="video-tree-3" class="video">
+		<source src="assets/video/tree-3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		Your browser does not support the video tag.
+	</video>   
+
+
+	<div class="modal badge tree-lover-badge">
+		<img src="assets/badge_1.png" alt="tree lover badge" class="badge">
+		<h3>Congratulations!</h3>
+		<p>
+			You've finished level one and got a reward: <strong>the Tree Lover Badge!</strong>
+		</p>
+		<p>
+			<a href="#" id="fb-share" class="button fb has-img small">
+				<img src="assets/fb.png" alt="facebook">
+				<span>Share</span>
+			</a>
+		</p>
+	</div>
+
+	<div class="modal level-end">
+		<p>
+			Woot! You have accomplished Level One, would you like to start <strong>Level Two</strong>?
+		</p>
+		<p>
+			<a href="#" class="button small">Start Now</a>
+			<a href="#" id="save-quit" class="button small secondary">Save &amp; Quit</a>
+		</p>
+	</div>
+
+	<div class="app-dialog">
+		<div class="app-dialog-inner">
+			<img src="assets/spirit.png" alt="spirit plant illustration" class="spirit">
+			<div class="app-dialog-text-wrap">
+				<p class="app-dialog-text stronger"></p>
+				<a href="#" class="button button-next small stronger">Next &raquo;</a>
+			</div>
+		</div>
+	</div>
+
+</section>	<!-- .app-main -->
+	
+
+<script src="js/map.js"></script>
+				
+</body>
+</html>

@@ -1,0 +1,44 @@
+.app-dialog {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: $orange-primary;
+	color: white;
+	line-height: 1em;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+
+	p { margin-bottom: 0.5em; }
+
+}
+
+.app-dialog-inner {
+	position: relative;
+	padding: 0.5em;
+	margin: 0.5em;
+	border: 1px solid white;
+	border-radius: 7px;
+	min-height: 120px;
+	overflow: hidden;
+}
+
+.app-dialog-text-wrap {
+	font-size: 16px;
+	padding: 0 0 0 3.5em;
+}
+
+.spirit {
+	width: 70px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.button-next {
+	float: right;
+}
